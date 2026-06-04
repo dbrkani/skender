@@ -1,0 +1,159 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 18px 0;
+  transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  padding: 12px 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+.logo span {
+  color: var(--blue-500);
+}
+
+.scrolled .logo {
+  color: var(--navy-900);
+}
+
+.scrolled .logo span {
+  color: var(--blue-600);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--white);
+}
+
+.scrolled .links a {
+  color: var(--slate-700);
+}
+
+.scrolled .links a:hover {
+  color: var(--blue-600);
+}
+
+.navCta {
+  background: var(--white);
+  color: var(--navy-900) !important;
+  padding: 10px 20px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease !important;
+}
+
+.navCta:hover {
+  background: var(--blue-100);
+}
+
+.scrolled .navCta {
+  background: var(--navy-900);
+  color: var(--white) !important;
+}
+
+.scrolled .navCta:hover {
+  background: var(--blue-600);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.burger span {
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.scrolled .burger span {
+  background: var(--navy-900);
+}
+
+@media (max-width: 760px) {
+  .burger {
+    display: flex;
+  }
+
+  .links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+    padding: 12px 24px 24px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+  }
+
+  .links.open {
+    max-height: 360px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .links a {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--paper);
+    color: var(--slate-700);
+  }
+
+  .links a:hover {
+    color: var(--blue-600);
+  }
+
+  .navCta {
+    margin-top: 12px;
+    text-align: center;
+    background: var(--navy-900);
+    color: var(--white) !important;
+  }
+}

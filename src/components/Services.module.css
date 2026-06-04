@@ -1,0 +1,25 @@
+.services {
+  background: var(--paper);
+}
+
+.header {
+  max-width: 620px;
+  margin-bottom: 56px;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin: 14px 0 18px;
+  color: var(--navy-900);
+}
+
+.lead {
+  color: var(--slate-500);
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}

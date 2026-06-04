@@ -1,0 +1,141 @@
+.hero {
+  position: relative;
+  padding: 180px 0 110px;
+  background: var(--navy-900);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.32;
+  z-index: 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(160deg, rgba(10, 31, 60, 0.92) 0%, rgba(26, 58, 100, 0.82) 55%, rgba(31, 95, 214, 0.78) 140%);
+}
+
+.glow {
+  position: absolute;
+  top: -200px;
+  right: -120px;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, rgba(47, 114, 240, 0.55) 0%, transparent 68%);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--blue-100);
+  animation: fadeUp 0.6s ease both;
+}
+
+.title {
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  margin: 18px 0 24px;
+  max-width: 16ch;
+  color: var(--white);
+  animation: fadeUp 0.6s ease 0.1s both;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--slate-300);
+  max-width: 54ch;
+  animation: fadeUp 0.6s ease 0.2s both;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 38px;
+  animation: fadeUp 0.6s ease 0.3s both;
+}
+
+.primary,
+.secondary {
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.primary {
+  background: var(--white);
+  color: var(--navy-900);
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  background: var(--blue-100);
+}
+
+.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--white);
+}
+
+.secondary:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-top: 64px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  animation: fadeUp 0.6s ease 0.4s both;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats strong {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.stats span {
+  font-size: 0.9rem;
+  color: var(--slate-300);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .stats {
+    gap: 32px;
+  }
+}

@@ -1,0 +1,79 @@
+:root {
+  /* Blue / professional palette */
+  --navy-900: #0a1f3c;
+  --navy-800: #112a4d;
+  --navy-700: #1a3a64;
+  --blue-600: #1f5fd6;
+  --blue-500: #2f72f0;
+  --blue-100: #e6efff;
+  --slate-700: #34465e;
+  --slate-500: #5d7088;
+  --slate-300: #aebccd;
+  --paper: #f7f9fc;
+  --white: #ffffff;
+  --ink: #0c1623;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+
+  --maxw: 1180px;
+  --radius: 14px;
+  --shadow-sm: 0 1px 3px rgba(10, 31, 60, 0.08);
+  --shadow-md: 0 12px 32px rgba(10, 31, 60, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
