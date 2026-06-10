@@ -7,7 +7,7 @@ export default function About() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.media}>
           <img src={aboutImg} alt="Two colleagues in conversation" />
-          <span className={styles.badge}>Est. 2026</span>
+          <span className={styles.badge}>Est. 2001</span>
         </div>
         <div className={styles.content}>
           <p className="eyebrow">About us</p>
